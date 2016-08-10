@@ -1,0 +1,12 @@
+NetLib = Library( Concat(CurrentDir(), "libNet.so" ) );
+
+ITunesSearchRun = Class( NetLib, "g_ITunesSearchRun" );
+!( String inputFile, Output, List<string> excludedGenres, size_t numThreads, size_t inputStartLine )
+! implements Runnable
+
+SpotifySearch = Class( NetLib, "g_SpotifySearch" );
+!( Output, size_t maxTracks, List<string> filteredIds, size_t offset )
+
+EnglishTitle = Class( NetLib, "g_EnglishTitle" );
+!( List<string> inputLanguageFiles, List<string> linesToConvert, Output  )
+! implements Runnable
